@@ -2,14 +2,14 @@
   "users": [
     {
       "email": "sindico@mail.com",
-      "password": "$2a$10$LQpqw3WES8rwLU.YaZBt1u30LIqpPcmKahoAdobe4nMzJeVo5fJ5S",
+      "password": "$2a$10$p17hJsKZ5s3GHrAoNL/nv.bJSR0sbtJrXwG92mRSQvP6GnUYLwtKS",
       "is_admin": "true",
       "name": "sindico",
       "id": 1
     },
     {
       "email": "ana@mail.com",
-      "password": "$2a$10$/rkR6I0UA2WxTA1ZYZUiDezLUOKRaXB/KH0o3Ntc2raXa/1x3RaT.",
+      "password": "$2a$10$E/AJA.//VFLMZ6OQSBXixedpDxF/uIMg3LHP9paaa6weQHi8XF1Ke",
       "is_admin": "false",
       "name": "ana",
       "condId": 1,
@@ -23,33 +23,8 @@
       "id": 1
     }
   ],
-  "improvements": [
-    {
-      "userId": 1,
-      "condId": 1,
-      "title": "Portão Eletrico",
-      "description": "Foi realizada uma implantação do portão automatico para uma maior segurança dos moradores",
-      "id": 1
-    }
-  ],
-  "cashs": [
-    {
-      "userId": 1,
-      "cond_id": 1,
-      "title": "Pagamento faxina",
-      "price": 400,
-      "type": "Saída",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "cond_id": 1,
-      "title": "Pagamento taxa condominio",
-      "price": 1200,
-      "type": "Entrada",
-      "id": 2
-    }
-  ],
+  "improvements": [],
+  "cashs": [],
   "messages": [
     {
       "userId": 1,
@@ -67,6 +42,42 @@
       "service": "Eletricista",
       "contact": "99 99999-9999",
       "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "userId": 1,
+      "condId": 1,
+      "messageId": 1,
+      "comment": "Teria como realizar a troca do dia da manutenção?",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "condId": 1,
+      "messageId": 1,
+      "comment": "Qual será o valor?",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "condId": 1,
+      "messageId": 1,
+      "comment": "Qual horario será realizado?",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "condId": 1,
+      "messageId": 1,
+      "comment": "Qual horario será realizado?",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "messageId": 1,
+      "comment": "Qual horario será realizado?",
+      "id": 5
     }
   ]
 }
