@@ -1,13 +1,16 @@
-# MEU CONDOMINIO
+<h1 align ='center'>MEU CONDOMINIO</h1>
 
-Essa é uma aplicação MEU CONDOMINIO com objetivo de cadastrar moradores e sindicos dos condominios para facilitar a comunicação dentro do condominio. 
+Essa é uma aplicação MEU CONDOMINIO com objetivo de facilitar a comunicação dentro do seu condominio. 
 
 ## Endpoints
 A API possue endpoints para cadastrar seu usuario (moradar e sindico), realizar login, cadastrar condominio, realizar postagens das informações para os moradores e informações sobre melhorias e caixa do condominio.
 
+<a href="https://insomnia.rest/run/?label=MEU%20CONDOMINIO&uri=https%3A%2F%2Fgithub.com%2FProjeto-Frontend-T15%2FAPI-FAKE%2Fblob%2Fmain%2FInsomnia_meucondominio.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
 
-### Cadastro
-
+<blockquote> Para importar o JSON no Insomnia é só clicar no botão "Run in Insomnia". Depois é só seguir os passos que ele irá importar todos os endpoints em seu insomnia.
+</blockquote>
+<br>
+<h2 align ='center'>Criação de usuário</h2>
 POST /register <br/>
 POST /signup <br/>
 POST /users
