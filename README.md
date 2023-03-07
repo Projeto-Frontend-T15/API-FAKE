@@ -137,3 +137,282 @@ GET  /conds - FORMATO DA RESPOSTA - STATUS 200
 ]
 ```
 <h2>Rotas que necessitam de autorização</h2>
+<h3 align ='center'>SINDICO</h3>
+
+<h2>CRIAR CONDOMINIO</h2>
+
+POST /conds - FORMATO DA REQUISIÇÃO
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o condominio.
+```json
+{
+	"name": "Condominio Kenzie",
+	"userId": 1
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /messages - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"name": "Condominio Kenzie",
+	"userId": 1,
+	"id": 1
+}
+```
+
+<h2>RECADOS</h2>
+<h3 align ='center'>CRIAR RECADO</h3>
+
+POST /messages - FORMATO DA REQUISIÇÃO
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+```json
+{
+	"userId": 1,
+	"condId": 1,
+	"title": "Informação sobre limpeza caixa d'água ",
+	"descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 08-03 das 10h as 12h. Agradeço compreensão de todos"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /messages/ID - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"userId": 1,
+	"condId": 1,
+	"title": "Informação sobre limpeza caixa d'água ",
+	"descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 08-03 das 10h as 12h. Agradeço compreensão de todos",
+	"id": 1
+}
+```
+
+<h3 align ='center'>EDITAR RECADO</h3>
+
+PUT /messages/ID - FORMATO DA REQUISIÇÃO
+<br>
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+```json
+{
+	"userId": 1,
+  	"condId": 1,
+	"title": "Info limpeza caixas d'água",
+	"descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 20-03 das 10h as 12h. Agradeço compreensão de todos"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+PUT /messages/ID - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"userId": 1,
+	"condId": 1,
+	"title": "Info limpeza caixas d'água",
+	"descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 20-03 das 10h as 12h. Agradeço compreensão de todos",
+	"id": 1
+}
+```
+
+<h3 align ='center'>DELETAR RECADO</h3>
+DELETE /messages/ID - FORMATO DA REQUISIÇÃO
+<br>
+Não tem corpo da requisição
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+DELETE /messages/ID - FORMATO DA RESPOSTA - STATUS 200
+<br>
+{}
+
+<h2>CAIXA CONDOMINIO</h2>
+POST /cachs - FORMATO DA REQUISIÇÃO
+<br>
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+```json
+{
+	"userId": 1,
+	"cond_id": 1,
+	"title": "Pagamento taxa condominio",
+	"price": 1200,
+	"type" : "Entrada"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /cachs - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"userId": 1,
+	"cond_id": 1,
+	"title": "Pagamento taxa condominio",
+	"price": 1200,
+	"type": "Entrada",
+	"id": 1
+}
+```
+
+<h2>MANUTENÇÃO CONDOMINIO</h2>
+
+POST /maintenance - FORMATO DA REQUISIÇÃO
+<br>
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+```json
+{
+	"userId": 1,
+	"cond_id": 1,
+	"name": "Fred",
+	"service": "Eletricista",
+	"contact": "99 99999-9999"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /maintenance - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"userId": 1,
+	"cond_id": 1,
+	"name": "Fred",
+	"service": "Eletricista",
+	"contact": "99 99999-9999",
+	"id": 1
+}
+```
+
+<h2>MELHORIAS CONDOMINIO</h2>
+POST /improvements - FORMATO DA REQUISIÇÃO
+<br>
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+```json
+{
+	"userId": 1,
+	"condId": 1,
+	"title": "Portão Eletrico",
+	"description": "Foi realizada uma implantação do portão automatico para uma maior segurança dos moradores"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+POST /improvements - FORMATO DA RESPOSTA - STATUS 200
+```json
+{
+	"userId": 1,
+	"condId": 1,
+	"title": "Portão Eletrico",
+	"description": "Foi realizada uma implantação do portão automatico para uma maior segurança dos moradores",
+	"id": 1
+}
+```
+<h2>MORADORES CONDOMINIO</h2>
+<p>Buscar por todos os moradores do condominio</p>
+GET /users?condId=1 - FORMATO DA REQUISIÇÃO
+
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /users?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"email": "ana@mail.com",
+		"password": "$2a$10$wY8bjsHMf/hlWZVfuyGqpO6pPIQA8YPNNGsJQFM0GuB3CJ0AOPKlu",
+		"is_admin": "false",
+		"name": "ana",
+		"condId": 1,
+		"id": 1
+	}
+]
+```
+
+<h3 align ='center'>MORADORES</h3>
+O morador só poderar realizar a leitura dos recados, manutenção, melhorias e o fluxo de caixa.
+
+<h2>LEITURA RECADOS</h2>
+GET /messages?condId=1 - FORMATO DA REQUISIÇÃO
+
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /messages?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"userId": 1,
+		"condId": 1,
+		"title": "Informação sobre limpeza caixa d'água ",
+		"descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 08-03 das 10h as 12h. Agradeço compreensão de todos",
+		"id": 1
+	}
+]
+```
+<h2>LEITURA MANUTENÇÃO</h2>
+GET /maintenance?condId=1 - FORMATO DA REQUISIÇÃO
+
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /maintenance?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"userId": 1,
+		"cond_id": 1,
+		"name": "Fred",
+		"service": "Eletricista",
+		"contact": "99 99999-9999",
+		"id": 1
+	}
+]
+```
+<h2>LEITURA MELHORIAS</h2>
+GET /improvements?condId=1 - FORMATO DA REQUISIÇÃO
+
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /improvements?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"userId": 1,
+		"condId": 1,
+		"title": "Portão Eletrico",
+		"description": "Foi realizada uma implantação do portão automatico para uma maior segurança dos moradores",
+		"id": 1
+	}
+]
+```
+<h2>LEITURA CAIXA</h2>
+GET /cashs?condId=1 - FORMATO DA REQUISIÇÃO
+
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /cashs?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"userId": 1,
+		"cond_id": 1,
+		"title": "Pagamento taxa condominio",
+		"price": 1200,
+		"type": "Entrada",
+		"id": 1
+	}
+]
+```
