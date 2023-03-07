@@ -286,7 +286,8 @@ POST /maintenance - FORMATO DA RESPOSTA - STATUS 200
 <h2>MELHORIAS CONDOMINIO</h2>
 POST /improvements - FORMATO DA REQUISIÇÃO
 <br>
-No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio.
+No corpo da requisição é obrigatório encaminhar o id do sindico que esta criando o recado e o id do con dominio
+
 ```json
 {
 	"userId": 1,
