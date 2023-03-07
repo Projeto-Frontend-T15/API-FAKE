@@ -310,6 +310,29 @@ POST /improvements - FORMATO DA RESPOSTA - STATUS 200
 	"id": 1
 }
 ```
+
+<h2>COMENTÁRIOS DE CADA RECADO</h2>
+<p>Realizar a busca dos comentários de cada morador sobre cada recado</p>
+GET /comments?messageId=1 - FORMATO DA REQUISIÇÃO
+<br>
+Não tem corpo da requisição.
+<br>
+Caso dê tudo certo, a resposta será assim:
+
+GET /comments?messageId=1 - FORMATO DA RESPOSTA - STATUS 200
+```json
+[
+	{
+		"userId": 2,
+		"messageId": 1,
+		"comment": "Qual horario será realizado?",
+		"id": 1
+	}
+]
+```
+
+
+
 <h2>MORADORES CONDOMINIO</h2>
 <p>Buscar por todos os moradores do condominio</p>
 GET /users?condId=1 - FORMATO DA REQUISIÇÃO
@@ -334,7 +357,37 @@ GET /users?condId=1 - FORMATO DA RESPOSTA - STATUS 200
 ```
 
 <h3 align ='center'>MORADORES</h3>
-O morador só poderar realizar a leitura dos recados, manutenção, melhorias e o fluxo de caixa.
+O morador poderar realizar a leitura dos recados e realizar comentários em cada recado, leitua manutenção, leitura melhorias e leitura do fluxo de caixa.
+
+
+<h2>ADICIONAR COMENTÁRIO NO RECADO</h2>
+POST /comments - FORMATO DA REQUISIÇÃO
+
+<br>
+No corpo da requisição é obrigatório encaminhar o id do morador que esta criando o recado e o id do recado.
+<br>
+
+```json
+{
+	"userId": 2,
+	"messageId" : 1,
+	"comment": "Essa manutenção deveria ocorrer durante a semana em horarios que a maioria dos moradores estaria trabalhando!"
+}
+```
+
+Caso dê tudo certo, a resposta será assim:
+
+GET /messages?condId=1 - FORMATO DA RESPOSTA - STATUS 200
+
+```json
+{
+	"userId": 2,
+	"messageId": 1,
+	"comment": "Essa manutenção deveria ocorrer durante a semana em horarios que a maioria dos moradores estaria trabalhando!",
+	"id": 1
+}
+```
+
 
 <h2>LEITURA RECADOS</h2>
 GET /messages?condId=1 - FORMATO DA REQUISIÇÃO
