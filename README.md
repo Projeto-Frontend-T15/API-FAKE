@@ -1,10 +1,10 @@
-# json-server-base
+# MEU CONDOMINIO
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Projetos Front-end.
+Essa é uma aplicação MEU CONDOMINIO com objetivo de cadastrar moradores e sindicos dos condominios para facilitar a comunicação dentro do condominio. 
 
 ## Endpoints
+A API possue endpoints para cadastrar seu usuario (moradar e sindico), realizar login, cadastrar condominio, realizar postagens das informações para os moradores e informações sobre melhorias e caixa do condominio.
 
-Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
 
 ### Cadastro
 
