@@ -1,56 +1,18 @@
 {
   "users": [
     {
-      "email": "sindico@mail.com",
-      "password": "$2a$10$p17hJsKZ5s3GHrAoNL/nv.bJSR0sbtJrXwG92mRSQvP6GnUYLwtKS",
+      "email": "carol@mail.com",
+      "password": "$2a$10$fCCd.rWu5Yri8MIqx0ynEOEucH7NKx0jR1dXDxpgOoF9mNnwfM0Zm",
       "is_admin": "true",
-      "name": "sindico",
-      "id": 1
-    },
-    {
-      "email": "ana@mail.com",
-      "password": "$2a$10$E/AJA.//VFLMZ6OQSBXixedpDxF/uIMg3LHP9paaa6weQHi8XF1Ke",
-      "is_admin": "false",
-      "name": "ana",
-      "condId": 1,
-      "id": 2
-    },
-    {
-      "email": "sindico5@mail.com",
-      "password": "$2a$10$AEJTTmkUZusWWpIz1iNLHO2tOaRIN1CzT9j2upQ4f8vS6n/FJfXje",
-      "is_admin": "true",
-      "name": "sindico4",
-      "id": 3
-    }
-  ],
-  "conds": [
-    {
-      "name": "Condominio Kenzie",
-      "userId": 1,
+      "name": "Carol",
       "id": 1
     }
   ],
+  "conds": [],
   "improvements": [],
   "cashs": [],
-  "messages": [
-    {
-      "userId": 1,
-      "condId": 1,
-      "title": "Informação sobre limpeza caixa d'água ",
-      "descripiton": "Informo a todos os moradores que ocorrerá manutenção das caixas d'água do condominio e pode ocorrer falta de água em seu apartamento no dia 08-03 das 10h as 12h. Agradeço compreensão de todos",
-      "id": 1
-    }
-  ],
-  "maintenance": [
-    {
-      "userId": 1,
-      "cond_id": 1,
-      "name": "Fred",
-      "service": "Eletricista",
-      "contact": "99 99999-9999",
-      "id": 1
-    }
-  ],
+  "messages": [],
+  "maintenance": [],
   "comments": [
     {
       "userId": 1,
@@ -86,6 +48,5 @@
       "comment": "Qual horario será realizado?",
       "id": 5
     }
-  ],
-  "login":[]
+  ]
 }
