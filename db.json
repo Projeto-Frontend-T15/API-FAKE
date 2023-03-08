@@ -14,6 +14,13 @@
       "name": "ana",
       "condId": 1,
       "id": 2
+    },
+    {
+      "email": "sindico5@mail.com",
+      "password": "$2a$10$AEJTTmkUZusWWpIz1iNLHO2tOaRIN1CzT9j2upQ4f8vS6n/FJfXje",
+      "is_admin": "true",
+      "name": "sindico4",
+      "id": 3
     }
   ],
   "conds": [
@@ -79,5 +86,6 @@
       "comment": "Qual horario será realizado?",
       "id": 5
     }
-  ]
+  ],
+  "login":[]
 }

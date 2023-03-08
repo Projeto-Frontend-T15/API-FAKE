@@ -15,7 +15,8 @@ const rules = auth.rewriter({
   cashs: 640,
   maintenance: 640,
   messages: 640,
-  comments: 640
+  comments: 640,
+  login: 1
 });
 
 app.use(cors());
