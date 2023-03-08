@@ -1,52 +1,9 @@
 {
-  "users": [
-    {
-      "email": "carol@mail.com",
-      "password": "$2a$10$fCCd.rWu5Yri8MIqx0ynEOEucH7NKx0jR1dXDxpgOoF9mNnwfM0Zm",
-      "is_admin": "true",
-      "name": "Carol",
-      "id": 1
-    }
-  ],
+  "users": [],
   "conds": [],
   "improvements": [],
   "cashs": [],
   "messages": [],
   "maintenance": [],
-  "comments": [
-    {
-      "userId": 1,
-      "condId": 1,
-      "messageId": 1,
-      "comment": "Teria como realizar a troca do dia da manutenção?",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "condId": 1,
-      "messageId": 1,
-      "comment": "Qual será o valor?",
-      "id": 2
-    },
-    {
-      "userId": 2,
-      "condId": 1,
-      "messageId": 1,
-      "comment": "Qual horario será realizado?",
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "condId": 1,
-      "messageId": 1,
-      "comment": "Qual horario será realizado?",
-      "id": 4
-    },
-    {
-      "userId": 2,
-      "messageId": 1,
-      "comment": "Qual horario será realizado?",
-      "id": 5
-    }
-  ]
+  "comments": []
 }
