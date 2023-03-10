@@ -11,7 +11,7 @@ A API possue endpoints para cadastrar seu usuario (moradar e sindico), realizar 
 </blockquote>
 <br>
 
-A url base da API é https://api-meucondominio.onrender.com/
+A url base da API é https://api-meucondominio.onrender.com
 
 <h2 align ='center'>Criação de usuário</h2>
 POST /register - FORMATO DA REQUISIÇÃO
